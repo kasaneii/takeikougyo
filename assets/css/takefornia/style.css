@@ -1,0 +1,1238 @@
+*,
+*::before,
+*::after {
+box-sizing: border-box;
+}
+/*
+Remove list styles (bullets/numbers)
+in case you use it with normalize.css
+*/
+a {
+  text-decoration: none;
+}
+ol, ul {
+  padding: 0;
+  list-style: none;
+}
+/* For images to not be able to exceed their container */
+img {
+  max-width: 100%;
+}
+/* Removes spacing between cells in tables */
+table {
+  border-collapse: collapse;
+}
+/* Revert the 'white-space' property for textarea elements on Safari */
+textarea {
+  white-space: revert;
+}
+body {
+  overflow-x: hidden;
+}
+section {
+  overflow: hidden;
+}
+
+@font-face {
+  font-family: "Cocogoose";
+  src: url('fonts/COCOGOOSE-PRO-LIGHT-TRIAL.TTF');
+  src: url('fonts/COCOGOOSE-PRO-REGULAR-TRIAL.TTF');
+  src: url('fonts/COCOGOOSE-PRO-SEMILIGHT-TRIAL.TTF');
+}
+
+@font-face {
+  font-family: "Sweet Sensation";
+  src: url('fonts/SWEETSENSATIONSPERSONALUSE-LRGQ.TTF');
+}
+
+:root {
+
+  /* Colors */
+  --clr-light: #fff;
+  --clr-cream: #EBDECE;
+  --clr-yellow: #F5AA5F;
+  --clr-brown: #3E2A20;
+  --clr-mocha: #EFBC9C;
+  --clr-light-cyan: #ACDCD8;
+  --clr-blue: #669FB2;
+  --clr-orange: #EA572A;
+  --clr-green: #0CA54B;
+  --clr-neon-green: #06C755;
+  --clr-sail: #EBDECE;
+  --clr-dark-yellow: #E08223;
+
+  /* Background */
+  --bg-brown: rgba(62, 42, 32, 0.80);
+
+  /* Fonts */
+  --font-cocogoose: "Cocogoose";
+  --font-gothic: "Zen Kaku Gothic New", sans-serif;
+  --font-kiwi: "Kiwi Maru", serif;
+  --font-sweet: "Sweet Sensation";
+  --font-poppins: "Poppins", sans-serif;
+  --font-calistoga: "Calistoga", serif;
+
+  /* Texts */
+  --text-xl: 24px;
+  --text-lg: 20px;
+  --text-m: 16px;
+  --text-sm: 14px;
+  --text-xs: 12px;
+  --text-2xs: 10px;
+
+  /* Headings */
+  --heading-one: 76px;
+  --heading-two: 64px;
+  --heading-three: 40px;
+  --heading-four: 32px;
+
+  /* Line height */
+  --line-height-170: 1.7;
+  --line-height-150: 1.5;
+  --line-height-120: 1.2;
+
+  /* Box Shadow */
+  --card-hover-shadow: 0px 0px 20px rgba(0, 0, 0, 0.20);
+  --button-hover-shadow: 0px 4px 10px rgba(234, 87, 42, 0.30);
+  --ig-button-hover-shadow: 0px 4px 10px rgba(226, 68, 91, 0.30);
+  --pagination-hover-shadow: 0px 4px 4px rgba(234, 87, 42, 0.25);
+}
+
+/* Bootstrap */
+.container-fluid, .container {
+  padding-left: 0;
+  padding-right: 0;
+}
+p, h1, h2, h3, h4, h5, h6{
+  margin: 0;
+}
+
+/* Global */
+.section-centered {
+  padding: 100px 0;
+  display: flex;
+  justify-content: center;
+}
+.gap-100 {
+  gap: 100px;
+}
+.text-center {
+  text-align: center;
+}
+.bg__yellow {
+  background: var(--clr-yellow);
+}
+.bg__mocha {
+  background: var(--clr-mocha);
+}
+.bg__blue {
+  background: var(--clr-blue);
+}
+.bg__orange {
+  background: var(--clr-orange);
+}
+.bg__green {
+  background: var(--clr-green);
+}
+.bg__sail {
+  background: var(--clr-sail);
+}
+.bg__dark-yellow {
+  background: var(--clr-dark-yellow);
+}
+.bg__neon-green {
+  background: var(--clr-neon-green);
+}
+.bg__light-cyan {
+  background: var(--clr-light-cyan);
+}
+.yellow__wave-img, .light-blue__wave-img, .mocha__wave-img, .orange__wave-img, .sail__wave-img {
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+}
+.mocha__wave-img-two, .yellow__wave-img-two, .orange__wave-img-two {
+  position: absolute;
+  top: -10px;
+  left: 0;
+  transform: scaleY(-1);
+}
+.yellow__wave-img, .yellow__wave-img-two {
+  background: url(/assets/images/takefornia/yellow_wave.webp) no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 60px;
+}
+.light-blue__wave-img {
+  background: url(/assets/images/takefornia/light_blue_wave.webp) no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 60px;
+}
+.mocha__wave-img, .mocha__wave-img-two {
+  background: url(/assets/images/takefornia/mocha_wave.webp) no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 60px;
+}
+.orange__wave-img, .orange__wave-img-two {
+  background: url(/assets/images/takefornia/orange_wave.webp) no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 60px;
+}
+.sail__wave-img {
+  background: url(/assets/images/takefornia/sail_wave.webp) no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 60px;
+}
+h1 {
+  font-size: var(--heading-one);
+  line-height: var(--line-height-120);
+}
+h2 {
+  font-size: var(--heading-two);
+  line-height: var(--line-height-120);
+}
+h3 {
+  font-size: var(--heading-three);
+  line-height: var(--line-height-150);
+}
+h4 {
+  font-size: var(--heading-four);
+  line-height: var(--line-height-150);
+}
+
+/* Navbar */
+.navbar {
+  background: var(--clr-cream) !important;
+  padding: 30px 0;
+}
+.navbar-collapse {
+  justify-content: center;
+}
+.navbar li {
+  font-family: var(--font-cocogoose);
+  font-weight: 300;
+  text-transform: uppercase;
+}
+.navbar-expand-lg .navbar-nav .nav-link {
+  padding: 8px 15px 0px 15px;
+}
+.line-button {
+  padding: 15px 20px; 
+  background: var(--clr-neon-green); 
+  border-radius: 10px; 
+  overflow: hidden; 
+  justify-content: center; 
+  align-items: center; 
+  gap: 10px; 
+  display: flex;
+}
+.line-logo {
+  width: 20px; 
+  height: 20px;
+  object-fit: contain; 
+}
+.line-button__text {
+  color: var(--clr-light); 
+  font-size: var(--text-m); 
+  font-family: var(--font-kiwi); 
+  font-weight: 500; 
+  text-transform: capitalize; 
+  margin: 0;
+}
+.navbar-toggler {
+  background: var(--clr-orange);
+  border: 0;
+  padding: 10px;
+  border-radius: 100px;
+}
+.navbar-toggler:focus {
+  box-shadow: 0px 0px 0px 3px rgba(234,87,42,0.5);
+}
+.navbar-toggler-icon {
+  width: 24px;
+  height: 24px;
+  background-image: url(/assets/images/takefornia/icons/menu_icon.webp);
+}
+.navbar-contact-details, .navbar-nav-img {
+  display: none;
+}
+.navbar-nav-col {
+  display: flex;
+}
+/* End of Navbar */
+
+/* Top section */
+.takefornia__hero {
+  width: 100%;
+  height: 100vh;
+  background: url(/assets/images/takefornia/hero_img.webp) no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.hero__content {
+  width: 100%;
+  height: 500px;
+  padding: 80px 0;
+  left: 0; 
+  bottom: 0; 
+  position: absolute; 
+  background: url(/assets/images/takefornia/top_bg.png) no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+}
+.hero__content-col {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+}
+.hero__title, .hero__text {
+  color: var(--clr-light);
+}
+.hero__title {
+  width: 100%;
+  font-family: var(--font-sweet); 
+  font-weight: 400; 
+  line-height: var(--line-height-120); 
+}
+.hero__text {
+  width: 100%; 
+  font-family: var(--font-kiwi); 
+  font-weight: 400; 
+  text-transform: capitalize;  
+}
+.hero__content-col .container {
+  display: flex;
+  gap: 100px;
+  align-items: center;
+}
+.takefornia__hero-col {
+  display: flex;
+  flex-direction: column;
+}
+/* End of Top section */
+
+/* Concept section */
+.concept-section {
+  position: relative;
+}
+.concept__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
+.section__title {
+  color: var(--clr-brown); 
+  font-size: var(--text-lg); 
+  font-family: var(--font-cocogoose); 
+  font-weight: 300; 
+  text-transform: capitalize; 
+}
+.section__heading {
+  color: var(--clr-brown); 
+  font-family: var(--font-gothic); 
+  font-weight: 700; 
+  line-height: var(--line-height-120);
+}
+.section__text {
+  color: var(--clr-brown);
+  font-family: var(--font-kiwi);
+  line-height: var(--line-height-150);
+  font-size: var(--text-lg);
+}
+.concept-img-box {
+  height: 550px;
+}
+.concept-img-box, .concept__content {
+  position: relative;
+  z-index: 1;
+}
+.concept__img {
+  width: 100%;
+  height: 100%;
+  object-position: bottom;
+  object-fit: cover;
+  border-radius: 20px;
+}
+.cactus-img-box {
+  padding: 30px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.cactus-img-box:last-of-type {
+  right: 0;
+  transform: scaleX(-1);
+}
+/* End of Concept section */
+
+/* Plan section */
+.plan-section {
+  position: relative;
+}
+.plan-section.section-centered {
+  padding-top: 150px;
+  padding-bottom: 0;
+}
+.plan-section .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.plan-section .section__heading {
+  font-family: var(--font-sweet); 
+  font-weight: 400; 
+  line-height: var(--line-height-120);
+  color: var(--clr-brown);
+}
+/* Swiper plugin styling */
+.swiper {
+  width: 100%;
+  height: 100%;
+  margin-top: 50px;
+}
+.swiper-slide {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.swiper-button-next:after, .swiper-button-prev:after {
+  width: 30px;
+  height: 30px;
+  background: url(/assets/images/takefornia/icons/arrow.webp) no-repeat;
+  background-size: contain;
+  text-indent: -9999px;
+  display: inline-block;
+}
+.swiper-button-next, .swiper-button-prev {
+  opacity: 0;
+  display: flex;
+  width: 50px; 
+  height: 50px; 
+  background: var(--clr-yellow); 
+  border-radius: 50px; 
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center;
+  transition: opacity 0.3s ease-in-out;
+}
+.swiper-button-next {
+  transform: scaleX(-1);
+}
+.swiper:hover .swiper-button-next, .swiper:hover .swiper-button-prev {
+  opacity: 1;
+}
+.swiper:hover .swiper-button-next.swiper-button-disabled, .swiper:hover .swiper-button-prev.swiper-button-disabled {
+  opacity: 0.35;
+}
+.swiper-button-next.swiper-button-disabled, .swiper-button-prev.swiper-button-disabled {
+  opacity: 0;
+}
+/* End of Swiper plugin styling */
+.plan-slider {
+  position: relative;
+  width: 100%;
+  padding: 30px; 
+  background: var(--clr-light); 
+  border-radius: 20px; 
+  display: flex;
+  gap: 50px;
+}
+.plan-slider:hover .plan-slider__prev-btn {
+  opacity: 1;
+}
+.plan-slider:hover .plan-slider__next-btn {
+  opacity: 1;
+}
+.plan-slider__content {
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: flex-start; 
+  gap: 30px; 
+  display: flex;
+}
+.plan-slider__description {
+  align-self: stretch;
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: flex-start; 
+  gap: 10px; 
+  display: flex;
+}
+.plan-slider__title {
+  color: var(--clr-brown); 
+  font-family: var(--font-gothic); 
+  font-weight: 700; 
+}
+.plan-slider__text {
+  align-self: stretch; 
+  color: var(--clr-brown); 
+  font-size: var(--text-m); 
+  font-family: var(--font-gothic); 
+  font-weight: 400; 
+  line-height: var(--line-height-150); 
+}
+.plan-slider__cost {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.plan-slider__cost-text {
+  color: var(--clr-brown); 
+  font-size: var(--text-m); 
+  font-family: var(--font-gothic); 
+  font-weight: 400;
+}
+.plan-slider__price {
+  color: var(--clr-brown); 
+  font-family: var(--font-kiwi); 
+  font-weight: 500; 
+  line-height: var(--line-height-170);
+}
+.plan-slider__image-box {
+  width: 100%;
+  height: 500px;
+  position: relative;
+}
+.plan-slider__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+.plan-slider__detail-list {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px 40px;
+  flex-wrap: wrap;
+}
+.plan-slider__list-item {
+  list-style-type: disc;
+  list-style-position: inside;
+}
+.plan-slider__prev-btn, .plan-slider__next-btn {
+  opacity: 0;
+  display: flex;
+  width: 60px; 
+  height: 60px; 
+  background: var(--clr-yellow); 
+  border-radius: 50px; 
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center; 
+  gap: 10px; 
+  border: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+.plan-slider__prev-btn {
+  position: absolute;
+  top: 0;
+  left: -30px;
+  bottom: 0;
+  margin: auto 0;
+}
+.plan-slider__next-btn {
+  position: absolute;
+  top: 0;
+  right: -30px;
+  bottom: 0;
+  margin: auto 0;
+}
+.plan-slider__prev-btn::after, .plan-slider__next-btn::after {
+  content: " ";
+  width: 40px;
+  height: 40px;
+  background: url(/assets/images/takefornia/icons/arrow.webp) no-repeat;
+  background-size: contain;
+}
+.plan-slider__next-btn::after {
+  transform: scaleX(-1);
+}
+.plant__one.show-price__container, .plant__two.show-price__container, .plant__three.show-price__container, .plant__four.show-price__container, .plant__five.show-price__container, .plant__six.show-price__container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.plant__one.show-price__container, .plant__four.show-price__container {
+  position: absolute;
+  top: 180px;
+  left: 125px;
+}
+.plant__two.show-price__container, .plant__five.show-price__container {
+  position: absolute;
+  top: 270px;
+  left: 280px;
+  z-index: 1;
+}
+.plant__three.show-price__container, .plant__six.show-price__container {
+  position: absolute;
+  top: 350px;
+  left: 160px;
+}
+.show-price-hover {
+  border: 0;
+  width: 32px;
+  height: 32px;
+  background: var(--clr-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100px;
+}
+.show-price__icon {
+  transform: scale(0.75);
+  transition: transform 0.3s ease-in-out;
+}
+.show-price-active .show-price__icon, .show-price-hover:hover .show-price__icon {
+  transform: scale(.6);
+}
+.show-price-hover:hover + .show-price-details, .show-price-active + .show-price-details {
+  opacity: 1;
+} 
+.show-price-details {
+  padding: 10px; 
+  background: var(--clr-light); 
+  border-radius: 5px; 
+  overflow: hidden; 
+  flex-direction: column;
+  gap: 0; 
+  display: flex;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+.show-plant__text {
+  max-width: 80px;
+  color: var(--clr-brown); 
+  font-size: var(--text-2xs); 
+  font-family: var(--font-cocogoose); 
+  font-weight: 300; 
+  text-transform: capitalize; 
+  line-height: var(--line-height-150);
+}
+.show-plant__price {
+  color: var(--clr-brown); 
+  font-size: var(--text-sm); 
+  font-family: var(--font-calistoga); 
+}
+/* End of plan section */
+
+/* Shop section */
+.shop-section {
+  position: relative;
+}
+.shop-section.section-centered {
+  padding-bottom: 150px;
+}
+.shop-list {
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.shop-item {
+  width: calc(33.33% - 20px);
+  background: var(--clr-light);
+  border-radius: 15px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.shop-img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.shop-text {
+  font-size: var(--text-lg);
+  font-family: var(--font-gothic);
+  line-height: var(--line-height-150);
+  color: var(--clr-brown);
+}
+/* End of shop section */
+
+/* Information section */
+.info-section {
+  position: relative;
+}
+.info-section.section-centered {
+  padding-bottom: 150px;
+}
+.info-list {
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.info-item {
+  width: calc(33.33% - 20px);
+  background: var(--clr-light);
+  border-radius: 15px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.3s ease-in-out;
+}
+.info-item:hover {
+  box-shadow: var(--card-hover-shadow);
+}
+.info-img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.info-text {
+  margin-top: 20px;
+  font-size: var(--text-lg);
+  font-family: var(--font-gothic);
+  line-height: var(--line-height-150);
+  color: var(--clr-brown);
+}
+.box-center {
+  align-self: stretch;
+  display: flex;
+  justify-content: center;
+}
+.view-more-btn {
+  margin-top: 50px;
+  border-radius: 10px;
+  padding: 15px 20px;
+  background: var(--clr-orange);
+  color: var(--clr-light);
+  font-size: var(--text-lg);
+  font-weight: 700;
+  line-height: var(--line-height-150);
+  transition: box-shadow 0.3s ease-in-out;
+}
+.view-more-btn:hover {
+  box-shadow: var(--button-hover-shadow);
+}
+.pagination-container {
+  margin-top: 100px;
+  justify-content: center; 
+  align-items: center; 
+  gap: 15px; 
+  display: flex;
+}
+.pagination, .pagination-active {
+  cursor: pointer;
+  width: 32px; 
+  height: 32px; 
+  border-radius: 3px; 
+  overflow: hidden; 
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center; 
+  gap: 10px; 
+  display: flex;
+}
+.pagination {
+  background: var(--clr-light);
+  transition: box-shadow 0.3s ease-in-out, background 0.3s ease-in-out; 
+}
+.pagination:hover {
+  background: var(--clr-orange); 
+  box-shadow: var(--pagination-hover-shadow);
+}
+.pagination-active {
+  background: var(--clr-orange); 
+}
+.pagination .pagination-number, .pagination-active .pagination-number {
+  font-size: var(--text-sm); 
+  font-family: var(--font-poppins); 
+  font-weight: 700; 
+}
+.pagination-active .pagination-number {
+  color: var(--clr-light); 
+}
+.pagination .pagination-number {
+  color: var(--clr-brown);
+  transition: color 0.3s ease-in-out; 
+}
+.pagination:hover .pagination-number {
+  color: var(--clr-light);
+}
+.pagination-next-btn {
+  cursor: pointer;
+  width: 32px; 
+  height: 32px; 
+  background: #EBB342; 
+  border-radius: 3px; 
+  overflow: hidden; 
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center; 
+  gap: 10px; 
+  display: inline-flex;
+}
+.pagination-next-btn::after {
+  content: " ";
+  width: 24px; 
+  height: 24px; 
+  background: url(/assets/images/takefornia/icons/arrow.webp) no-repeat;
+  background-size: contain;
+  transform: scaleX(-1);
+  justify-content: center;
+  align-items: center; 
+  display: flex;
+}
+/* End of information section */
+
+/* How it works section */
+.content {
+  align-self: stretch;
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center; 
+  gap: 10px; 
+  display: flex
+}
+.how-it-work__content {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column; 
+  gap: 50px;
+  padding: 0 30px;
+}
+.step {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center; 
+}
+.step__img {
+  width: 100px; 
+  height: 100px;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.10); 
+  border-radius: 50px; 
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center; 
+  gap: 10px; 
+  display: flex;
+}
+.step__no {
+  text-align: center; 
+  color: var(--clr-brown); 
+  font-size: var(--text-m); 
+  font-family: var(--font-poppins); 
+  font-weight: 700; 
+  text-transform: uppercase; 
+  line-height: var(--line-height-150); 
+  letter-spacing: 3px;
+  white-space: nowrap;
+}
+.step__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+.step__title {
+  color: var(--clr-brown); 
+  font-family: var(--font-gothic); 
+  font-weight: 700; 
+  text-transform: capitalize; 
+}
+.step__text {
+  align-self: stretch; 
+  color: var(--clr-brown); 
+  font-size: var(--text-lg); 
+  font-family: var(--font-kiwi); 
+  font-weight: 400; 
+  line-height: var(--line-height-150); 
+}
+/* End of How it works section */
+
+/* Work section */
+.works-section {
+  position: relative;
+}
+.works-section .container {
+  align-self: stretch; 
+  flex-direction: column; 
+  justify-content: flex-start; 
+  align-items: center; 
+  gap: 50px; 
+  display: flex;
+  margin: 70px auto;
+}
+.works__list {
+  align-self: stretch;
+  display: flex; 
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.card {
+  padding: 20px;
+  width: calc(50% - 15px);
+  border-radius: 20px;
+  border: none;
+}
+.card-body {
+  margin-top: 30px;
+  padding: 0;
+  display: flex;
+  align-items: center; 
+  gap: 30px;
+}
+.card-body__content {
+  align-self: stretch;
+}
+.card-img-top, .card-img-secondary {
+  border-radius: 10px;
+}
+.card-img-secondary {
+  width: 247px;
+  object-fit: contain;
+}
+.card-title, .card-text, .instagram-text {
+  font-family: var(--font-kiwi);
+  font-size: var(--text-lg);
+  color: var(--clr-brown);
+  line-height: var(--line-height-150);
+}
+.instagram-banner {
+  width: 100%;
+  background: var(--clr-light);
+  padding: 30px;
+  border-radius: 20px;
+}
+.instagram-content {
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: flex-start; 
+  gap: 30px; 
+  display: flex;
+}
+.instagram-button {
+  padding: 15px 20px; 
+  background: linear-gradient(90deg, #FEDA75 0%, #FA7E1E 25%, #D62976 52%, #962FBF 77%, #4F5BD5 100%); 
+  border-radius: 10px; 
+  overflow: hidden; 
+  justify-content: center; 
+  align-items: center; 
+  display: flex;
+  color: var(--clr-light);
+  font-size: var(--text-m);
+  font-family: var(--font-cocogoose);
+  text-transform: capitalize; 
+  transition: box-shadow 0.3s ease-in-out;
+}
+.instagram-button:hover {
+  box-shadow: var(--ig-button-hover-shadow);
+}
+.instagram-img {
+  height: 340px;
+  position: relative; 
+}
+.instagram-logo {
+  height: 70px;
+  object-fit: contain; 
+}
+.instagram-img__one, .instagram-img__two {
+  width: 320px;
+  object-fit: contain;
+  border-radius: 7px;
+}
+.instagram-img__two {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+/* End of works section */
+
+/* FAQ section */
+.faq-section {
+  position: relative;
+}
+.faq-section .container {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+.alt-content .section__title, .alt-content .section__heading, .alt-content .section__text {
+  color: var(--clr-light);
+}
+.accordion {
+  position: relative;
+  z-index: 1;
+}
+.accordion-item {
+  margin-top: 20px;
+  border-radius: 20px;
+}
+.accordion-item:first-of-type, .accordion-header {
+  border-radius: 20px;
+}
+.accordion-item:first-of-type>.accordion-header .accordion-button {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+.accordion-button, .accordion-body {
+  font-family: var(--font-kiwi);
+  font-size: var(--text-xl);
+  color: var(--clr-brown);
+  line-height: var(--line-height-150);
+  padding: 30px;
+}
+.accordion-button {
+  border-radius: 20px;
+}
+.accordion-button:not(.collapsed) {
+  background-color: transparent;
+  box-shadow: none;
+  border-bottom: 1px solid var(--clr-brown);
+  color: var(--clr-brown);
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.accordion-item:last-of-type, .accordion-item:last-of-type>.accordion-header .accordion-button.collapsed {
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.accordion-button::after {
+  width: 40px;
+  height: 40px;
+  background-image: url(/assets/images/takefornia/icons/plus.webp); 
+  background-size: contain;
+}
+.accordion-button:not(.collapsed)::after {
+  background-image: url(/assets/images/takefornia/icons/minus.webp);
+}
+/* End of FAQ section */
+
+/* Contact section */
+.contact-section {
+  height: 640px;
+  position: relative;
+  overflow: hidden;
+}
+.takefornia-contact__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(/assets/images/takefornia/contact_img.webp) no-repeat;
+  background-size: cover;
+  background-position: center;
+  filter: blur(5px);
+}
+.takefornia__contact {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(62, 42, 32, 0.50);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.takefornia__contact .container {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+.contact-details {
+  align-self: stretch;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+.contact-details__content {
+  width: 340px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.contact-detail__img {
+  width: 90px; 
+  height: 90px;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.10); 
+  border-radius: 500px; 
+  overflow: hidden; 
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center; 
+  gap: 10px; 
+  display: flex;
+}
+.contact-detail__text {
+  font-size: var(--text-lg);
+  color: var(--clr-light);
+  font-family: var(--font-cocogoose);
+  white-space: nowrap;
+}
+.contact-detail__text span {
+  font-family: var(--font-poppins);
+}
+/* End of contact section */
+
+/* Footer */
+.footer__text {
+  margin-top: 30px;
+}
+.footer__text, .footer__title, .footer-link a {
+  color: var(--clr-brown); 
+  font-size: var(--text-m); 
+  font-family: var(--font-cocogoose); 
+  font-weight: 300; 
+  line-height: var(--line-height-150);
+}
+.footer__title {
+  text-transform: uppercase; 
+}
+.footer-links-list {
+  height: 140px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 30px;
+}
+.footer__instagram-imgs {
+  margin-top: 30px;
+  display: flex;
+  gap: 7px;
+  flex-wrap: wrap;
+  width: 200px;
+}
+.footer__instagram-img {
+  width: 60px; 
+  height: 60px; 
+  border-radius: 5px;
+  object-fit: cover;
+}
+.contacts-list {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.contact-item {
+  display: flex;
+  gap: 10px;
+}
+.contact-item__icon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+.contact-item__text {
+  font-size: var(--text-m);
+  font-weight: 500;
+  color: var(--clr-brown);
+}
+.contact-item:last-child .contact-item__text {
+  font-family: var(--font-cocogoose);
+}
+/* End of footer */
+
+/* Information page */
+.info-hero-section {
+  position: relative;
+  height: 600px;
+}
+.info-hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(/assets/images/takefornia/info-hero-img.webp) no-repeat;
+  background-size: cover;
+  background-position: top;
+}
+.info-hero-section .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+.info-cards-section, .info-news-section {
+  position: relative;
+}
+.info-cards-section.section-centered, .info-hero-section.section-centered {
+  padding-bottom: 150px;
+}
+.info-cards-section .info-list {
+  margin-top: 0;
+}
+.info-news-section .container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.info-news__title {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.info-news__date, .info-news__heading, .info-news__text {
+  font-family: var(--font-gothic);
+  font-weight: 700;
+  color: var(--clr-brown);
+  line-height: var(--line-height-150);
+  margin-bottom: 0;
+}
+.info-news__date, .info-news__text {
+  font-size: var(--text-lg);
+}
+.info-news__text {
+  font-weight: 400;
+}
+.info-news__content {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.info-news__image {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+.back-btn__container {
+  margin-top: 70px;
+  display: flex;
+  justify-content: center;
+}
+.back-btn {
+  width: 100px;
+  padding: 15px 20px;
+  background: var(--clr-orange); 
+  border-radius: 10px; 
+  justify-content: center; 
+  align-items: center; 
+  gap: 10px; 
+  display: flex;
+  transition: box-shadow 0.3s ease-in-out;
+}
+.back-btn__text {
+  color: var(--clr-light); 
+  font-size: var(--text-m); 
+  font-family: var(--font-cocogoose); 
+  font-weight: 350; 
+  text-transform: capitalize; 
+  line-height: var(--line-height-150); 
+  margin-bottom: 0;
+}
+.back-btn:hover {
+  box-shadow: var(--button-hover-shadow);
+}

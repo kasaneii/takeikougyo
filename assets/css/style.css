@@ -1,0 +1,1572 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Noto Sans JP", sans-serif;
+  overflow-x: hidden;
+  position: relative;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  color: var(--clr-dark);
+  text-decoration: none;
+}
+
+ul, p, h1, h2, h3, h4, h5, h6{
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  overflow: hidden;
+}
+
+:root {
+  /* Colors */
+  --clr-light: white;
+  --clr-light-50: rgba(255, 255, 255, 0.50);
+  --clr-dark: #1E2023;
+  --clr-red: #C50F1C;
+  --clr-orange: #ED7D31;
+  --clr-blue-100: #014EA0;
+  --clr-blue-200: #223F9A;
+  --clr-grey-100: #F2F2F2;
+  --clr-grey-150: #f5f5f5;
+  --clr-grey-200: #D3D3D3;
+  --clr-grey-300: #333333;
+  --clr-light-blue: #4A80BC;
+  --clr-light-green: #289F99;
+
+  /* Heading */
+  --heading-one: 64px;
+  --heading-two: 54px;
+  --heading-three: 48px;
+  --heading-four: 24px;
+  --heading-five: 20px;
+
+  --heading-40: 40px;
+  --heading-36: 36px;
+  --heading-32: 32px;
+  --heading-28: 28px;
+  --heading-20: 20px;
+
+  /* Paragraph */
+  --paragraph-one: 24px;
+  --paragraph-two: 16px;
+
+  /* Line height and letter spacing */
+  --line-height-one: 1.7;
+  --line-height-two: 1.5;
+
+  /* Shadows */
+  --box-shadow: -4px 4px 20px rgba(0, 0, 0, 0.25);
+
+  /* Font-family */
+  --font-corben: 'Corben', serif;
+  --font-noto: "Noto Sans JP", sans-serif;
+}
+
+/* Swiper css */
+.top-section .swiper {
+  width: 100%;
+  height: 100%;
+}
+.work-section .swiper {
+  width: 100%;
+  overflow-y: hidden;
+}
+.project-list .projectSwiper {
+  width: 100%;
+}
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: var(--clr-light);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.swiper-pagination-bullet {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  line-height: 20px;
+  font-size: 14px;
+  color: var(--clr-blue-200);
+  opacity: 1;
+  background: transparent;
+  border: 1px solid var(--clr-blue-200);
+}
+.swiper-pagination-bullet-active {
+  color: var(--clr-light);
+  background: var(--clr-blue-200);
+}
+.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+  overflow: hidden;
+}
+.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal {
+  display: flex;
+  justify-content: center;
+}
+
+
+/* Custom classes */
+h1 {
+  color: var(--clr-light);
+  font-size: var(--heading-one);
+  line-height: var(--line-height-one);
+  font-weight: 700;
+}
+
+h2 {
+  font-size: var(--heading-two);
+  font-weight: 600;
+}
+
+h3 {
+  font-size: var(--heading-three);
+  line-height: var(--line-height-two);
+  font-weight: 600;
+}
+
+h4 {
+  font-size: var(--heading-four);
+  font-weight: 600;
+}
+
+h5 {
+  font-size: var(--heading-five);
+  font-weight: 600;
+}
+
+.flex-col-start, .flex-col-start-30, .flex-col-start-50 {
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: flex-start;
+  display: flex;
+}
+
+.flex-col-start {
+  gap: 10px;
+}
+
+.flex-col-start-30 {
+  gap: 30px;
+}
+
+.flex-col-start-50 {
+  gap: 50px;
+}
+
+.flex-col-center, .flex-col-center-50 {
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center;
+  display: flex;
+}
+
+.flex-col-center {
+  gap: 10px;
+}
+
+.flex-col-center-50 {
+  gap: 50px;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+}
+
+.flex-end {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.text-shadow {
+  text-shadow: 1px -1px 19px rgba(0,0,0,0.31); 
+}
+
+/* Navbar */
+.navbar {
+  padding: 0;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.container-fluid {
+  padding: 0;
+}
+
+.container {
+  padding: 0;
+}
+
+.navbar-brand {
+  color: var(--clr-dark); 
+  font-size: var(--paragraph-one);
+  font-weight: 500;
+  margin-left: 30px;
+}
+
+.navbar-brand img {
+  width: 60px;
+  height: 60px;
+}
+
+.nav-link {
+  color: var(--clr-dark); 
+  font-size: var(--paragraph-two);
+  font-weight: 500;
+  padding: 8px 20px;
+}
+
+.inquiry-btn {
+  margin-left: 30px;
+  padding: 10px 40px;
+  height: 90px; 
+  background: var(--clr-red); 
+  gap: 20px; 
+  border: none;
+}
+
+.inquiry-btn p {
+  color: var(--clr-light);
+  font-weight: 500;
+}
+
+.inquiry-btn-mobile {
+  display: none;
+}
+
+/* Top section */
+.top-section {
+  height: 110vh;
+  position: relative;
+}
+
+.topSwiper {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.top-content-div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  align-self: stretch;
+  z-index: 1;
+  height: 80%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+/* Takefornia Banner */
+.takefornia-banner {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.takefornia-div {
+  width: 100%;
+  height: 350px; 
+  padding: 30px; 
+  background: var(--clr-light);
+  position: absolute;
+  top: -150px;
+  left: 0;
+  overflow: hidden;
+}
+
+.takefornia-col-left {
+  height: 100%;
+  background: var(--clr-orange); 
+  position: relative;
+  padding: 20px;
+}
+
+.takefornia-col-left img {
+  position: absolute; 
+  top: -100%;
+  left: -50%;
+  mix-blend-mode: color-burn;
+  width: 300%;
+  object-fit: cover;
+}
+
+.takefornia-content-div {
+  align-self: stretch;
+  gap: 30px;
+  position: relative;
+  z-index: 1;
+}
+
+.takefornia-content-div h2, .takefornia-content-div h4, .takefornia-content-div h5  {
+  color: var(--clr-light); 
+  text-align: center;
+}
+
+.takefornia-content-div h2 {
+  font-family: var(--font-corben);
+}
+
+.takefornia-content-div h4 {
+  font-size: 28px;
+}
+
+.takefornia-img {
+  height: 100%;
+}
+
+.takefornia-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* About section */
+.about-section {
+  padding-top: 300px;
+}
+
+.about-col-left {
+  gap: 50px; 
+}
+
+.section-title {
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: flex-start; 
+  gap: 20px; 
+  display: flex;
+}
+
+.section-title h4 {
+  color: var(--clr-blue-100);
+  text-transform: uppercase;
+  font-style: italic;
+}
+
+.section-title h3 {
+  align-self: stretch; 
+  color: var(--clr-dark); 
+  text-transform: uppercase;
+}
+
+.section-paragraph {
+  font-size: var(--paragraph-one);
+  line-height: var(--line-height-one);
+  align-self: stretch; 
+  color: var(--clr-dark);
+  text-align: center;
+}
+
+.section-btn {
+  padding: 30px 50px;
+  background: var(--clr-blue-200); 
+  gap: 30px; 
+}
+
+.section-btn-title {
+  color: var(--clr-light-50); 
+  text-transform: uppercase;
+  font-size: var(--paragraph-two); 
+}
+
+.section-btn-p {
+  color: var(--clr-light);
+}
+
+.about-col-right {
+  align-self: stretch; 
+  position: relative;
+}
+
+.grey-bg {
+  background-color: var(--clr-grey-100);
+  width: 944px;
+  height: 570px;
+  position: absolute;
+  top: 100px;
+  left: 50px;
+}
+
+.about-section-img {
+  width: 894px;
+  height: 610px;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 100px;
+}
+
+.about-section .section-paragraph {
+  text-align: left;
+}
+
+/* Business section */
+.business-section {
+  padding: 100px 0;
+}
+
+.business-section-div {
+  align-self: stretch;
+}
+
+.business-section-div .section-title {
+  align-items: center;
+}
+
+.business-banner {
+  width: 100%;
+}
+
+.business-banner-div {
+  align-self: stretch; 
+  height: 600px;
+  background: url(../images/pixta_40540161.jpg) no-repeat center;
+  background-size: cover;
+}
+
+.takefornia-bg {
+  align-self: stretch; 
+  height: 600px;
+  background: url(../images/takefornia.png) no-repeat center;
+  background-size: cover;
+}
+
+.business-banner-content {
+  margin: auto 0;
+  align-self: stretch;
+}
+
+.painting-business-content {
+  padding: 50px; 
+  background: var(--clr-blue-200); 
+  box-shadow: var(--box-shadow);
+}
+
+.painting-business-content .flex-col-start {
+  align-self: stretch; 
+}
+
+.painting-business-content h3, .painting-business-content h6, .painting-business-content p {
+  color: var(--clr-light);
+}
+
+.painting-business-content h3 {
+  font-size: 40px;
+}
+
+.painting-business-content .takefornia-font {
+  font-size: 48px;
+  font-family: var(--font-corben);
+}
+
+.painting-business-content h1 {
+  font-family: var(--font-corben);
+}
+
+.painting-business-content p {
+  align-self: stretch; 
+  font-size: var(--paragraph-two);
+  line-height: var(--line-height-one);
+}
+
+.banner-btn, .mobile-banner-btn {
+  align-self: stretch; 
+  padding: 30px;
+  background: var(--clr-light); 
+  justify-content: space-between; 
+  align-items: center; 
+  gap: 30px;
+}
+
+.banner-btn {
+  display: flex;
+}
+
+.mobile-banner-btn {
+  display: none;
+}
+
+.banner-btn p, .mobile-banner-btn p {
+  align-self: stretch;
+  color: var(--clr-blue-200);
+  font-size: var(--paragraph-two);
+  font-weight: 600;
+}
+
+.chevron {
+  width: 24px; 
+  height: 24px; 
+  background: var(--clr-blue-200); 
+  border-radius: 9999px;
+}
+
+.chevron img {
+  width: 8px;
+  object-fit: contain; 
+}
+
+.takefornia-business-banner-div {
+  align-self: stretch; 
+  height: 800px; 
+  background: url(../images/takefornia.png) no-repeat center; 
+  background-size: cover; 
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center; 
+  gap: 10px; 
+  display: flex;
+}
+
+.takefornia-business-banner-content {
+  align-self: stretch; 
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: flex-end; 
+  gap: 10px; 
+  display: flex;
+}
+
+.diy-title {
+  color: var(--clr-light); 
+  font-size: 24px; 
+  font-weight: 500; 
+  letter-spacing: 1.20px; 
+}
+
+.takefornia-title {
+  color: var(--clr-light); 
+  font-size: 80px !important; 
+  font-family: "Corben", serif !important;
+  font-weight: 700 !important; 
+}
+
+.takefornia-paragraph {
+  align-self: stretch; 
+  color: var(--clr-light); 
+  font-size: 32px; 
+  line-height: 54.40px; 
+  letter-spacing: 1.28px; 
+}
+
+/* Work section */
+.work-section {
+  padding: 100px 0;
+}
+
+.work-section .section-title {
+  align-self: stretch; 
+}
+
+.work-card {
+  width: 100%;
+}
+
+.work-card img {
+  width: 100%; 
+  height: 400px;
+  object-fit: cover;
+}
+
+.work-card-content {
+  padding-top: 20px;
+  align-self: stretch;
+}
+
+.work-card-content h4 {
+  align-self: stretch;
+  color: var(--clr-dark); 
+  text-transform: uppercase;
+  text-align: left;
+}
+
+.work-card-content p {
+  align-self: stretch;
+  color: var(--clr-dark);
+  text-align: left;
+  font-size: var(--paragraph-two);
+}
+
+/* News section */
+.news-section {
+  padding: 100px 0; 
+  background: var(--clr-grey-100);
+}
+
+.news-section-div {
+  align-self: stretch; 
+  justify-content: center; 
+  align-items: flex-start; 
+  gap: 100px; 
+  display: flex;
+}
+
+.news-col-left {
+  padding-left: 0;
+  padding-right: 0;
+  height: 100%;
+}
+
+.news-col-left .section-title {
+  align-self: stretch;
+}
+
+.news-list-div {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.news-col-left .banner-btn, .news-col-list .mobile-banner-btn {
+  background: var(--clr-blue-200);
+}
+
+.news-col-left .banner-btn p, .news-col-list .mobile-banner-btn p {
+  color: var(--clr-light);
+}
+
+.news-col-left .banner-btn .chevron, .news-col-list .mobile-banner-btn .chevron {
+  background: var(--clr-light);
+}
+
+.news-divider {
+  align-self: stretch;
+}
+
+.divider {
+  width: 2px; 
+  height: 100%; 
+  background: var(--clr-grey-200);
+}
+
+.news-col-list {
+  padding: 30px 0;
+}
+
+.news-item {
+  align-self: stretch; 
+  padding-bottom: 50px; 
+  border-bottom: 1px var(--clr-grey-200) solid; 
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: flex-start; 
+  gap: 20px; 
+  display: flex;
+}
+
+.news-item:last-of-type {
+  border: none;
+}
+
+.news-flex {
+  justify-content: center; 
+  align-items: center; 
+  gap: 10px; 
+  display: flex;
+}
+
+.news-category {
+  padding: 7px 30px;
+  border-radius: 100px; 
+  overflow: hidden; 
+}
+
+.news-category h5 {
+  color: var(--clr-light);
+  text-transform: uppercase; 
+  font-weight: 400;
+}
+
+.news-date {
+  color: var(--clr-dark);
+  text-transform: uppercase; 
+  font-weight: 400;
+}
+
+.news-detail {
+  align-self: stretch; 
+  color: var(--clr-dark);
+  font-weight: 400; 
+  text-transform: uppercase; 
+  line-height: var(--line-height-one);
+}
+
+.light-green {
+  background: var(--clr-light-green);
+}
+
+.light-blue {
+  background: var(--clr-light-blue);
+}
+
+/* Recruit section */
+.recruit-section {
+  padding: 100px 0;
+}
+
+.recruit-section-div {
+  align-self: stretch; 
+}
+
+.recruit-section-div .section-title {
+  align-items: center;
+}
+
+/* Contact section */
+.contact-section {
+  padding: 50px 0;
+  background: var(--clr-red);
+}
+
+.contact-col-left h3 {
+  color: var(--clr-light); 
+}
+
+.contact-col-left p {
+  align-self: stretch; 
+  color: var(--clr-light); 
+}
+
+.contact-col-right {
+  align-self: stretch;
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: flex-start; 
+  gap: 30px; 
+  display: flex;
+}
+
+.contact-col-right h3 {
+  color: var(--clr-light);
+}
+
+.contact-col-right .tel {
+  color: var(--clr-light); 
+  font-size: 20px; 
+  font-weight: 600; 
+}
+
+.contact-btn {
+  align-self: stretch; 
+  padding: 30px; 
+  background: var(--clr-light); 
+  gap: 50px; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+}
+
+.contact-btn p {
+  color: var(--clr-red);
+  font-size: var(--paragraph-two); 
+  font-weight: 600;
+}
+
+.contact-btn .chevron {
+  background: var(--clr-red);
+}
+
+/* Footer section */
+footer {
+  padding: 100px 50px; 
+  background: var(--clr-grey-300);
+}
+
+.footer-flex {
+  align-self: stretch; 
+  flex-direction: column; 
+  justify-content: flex-start; 
+  align-items: flex-end; 
+  gap: 100px; 
+  display: flex;
+}
+
+.footer-row {
+  padding: 100px 0 50px; 
+}
+
+.footer-col-detail {
+  flex-direction: column; 
+  justify-content: flex-start; 
+  align-items: flex-start; 
+  gap: 80px; 
+  display: flex;
+}
+
+.footer-takei {
+  justify-content: flex-start; 
+  align-items: center; 
+  gap: 10px; 
+  display: flex;
+}
+
+.footer-takei img {
+  height: 60px;
+  object-fit: contain;
+}
+
+.footer-takei h4 {
+  color: var(--clr-light);
+}
+
+.footer-contact {
+  flex-direction: column; 
+  justify-content: flex-start; 
+  align-items: flex-start; 
+  gap: 30px; 
+  display: flex;
+}
+
+.footer-contact h4 {
+  color: var(--clr-light);  
+  font-weight: 400;
+  line-height: var(--line-height-one);
+}
+
+.footer-links-mobile {
+  display: none;
+}
+
+
+.footer-links-list a, .footer-copyright {
+  color: var(--clr-light); 
+}
+
+.footer-links-list li {
+  margin-top: 10px;
+}
+
+.footer-copyright {
+  padding: 0 0 100px;
+}
+
+.footer-copyright h5 {
+  padding: 0;
+}
+
+.footer-business-links {
+  flex-direction: column; 
+  display: flex;
+  gap: 10px;
+  margin-left: 100px;
+}
+
+.footer-business-links a {
+  font-size: 24px !important;
+}
+
+.footer-business-links a:first-child {
+  font-size: 32px !important;
+}
+
+/* Takei - Business Page */
+
+/* Business Top Section */
+.inside-top-section {
+  align-self: stretch;
+  height: 600px; 
+  padding-left: 10px;
+  padding-right: 10px;
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center; 
+  gap: 10px; 
+  display: flex;
+}
+
+.business-top-section {
+  background: url(../images/business/pixta_97362583_M.jpg) no-repeat center;
+  background-size: cover;
+}
+
+.inside-top-content {
+  align-self: stretch; 
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: flex-start; 
+  gap: 10px; 
+  display: flex;
+}
+
+.inside-top-content h4 {
+  color: var(--clr-light); 
+  text-transform: uppercase;
+  font-style: italic;
+}
+
+.inside-top-content h1 {
+  color: var(--clr-light); 
+}
+
+/* Business Details */
+.business-detail-section {
+  align-self: stretch;
+  padding-top: 100px; 
+  padding-bottom: 100px; 
+  background: var(--clr-light); 
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center; 
+  gap: 10px; 
+  display: flex;
+}
+
+.business-detail-div {
+  align-self: stretch; 
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center; 
+  gap: 50px; 
+  display: flex;
+}
+
+.business-detail-paragraph {
+  align-self: stretch; 
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: flex-start; 
+  gap: 10px; 
+  display: flex;
+}
+
+.business-detail-paragraph h3 {
+  align-self: stretch; 
+  text-align: center; 
+  color: var(--clr-dark);
+  line-height: var(--line-height-one);
+  font-size: var(--heading-32);
+}
+
+/* Business Results Section */
+.business-results-section {
+  align-self: stretch;
+  padding-top: 100px; 
+  padding-bottom: 100px; 
+  background: var(--clr-grey-150); 
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center; 
+  gap: 100px; 
+  display: flex;
+}
+
+.business-results-div {
+  align-self: stretch; 
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center; 
+  gap: 100px; 
+  display: flex;
+}
+
+/* Scaffolding and Painting Business Section*/
+.painting-business-div {
+  align-self: stretch; 
+  justify-content: center; 
+  align-items: center; 
+  display: flex;
+  height: 500px;
+}
+
+.painting-business-col-left, .takefornia-business-col-left {
+  width: 30%;
+  height: 100%;
+  position: relative;
+}
+
+.painting-business-col-right, .takefornia-business-col-right {
+  width: 70%;
+  height: 100%;
+}
+
+.painting-business-detail {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(0%, -50%);
+  width: 500px; 
+  padding: 50px; 
+  background: var(--clr-blue-200); 
+  box-shadow: var(--box-shadow); 
+  display: flex;
+  z-index: 1;
+}
+
+.painting-business-detail h2 {
+  color: var(--clr-light);
+  font-size: var(--heading-40);
+  line-height: var(--line-height-one); 
+  font-weight: 500;
+}
+
+.painting-business-detail p {
+  align-self: stretch; 
+  color: var(--clr-light); 
+  font-size: var(--paragraph-two);
+  line-height: var(--line-height-one);
+}
+
+.painting-business-div img, .takefornia-business-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.painting-flex-col {
+  align-self: stretch; 
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center; 
+  gap: 50px; 
+  display: flex;
+}
+
+.painting-works-div {
+  align-self: stretch; 
+  justify-content: center; 
+  align-items: flex-start; 
+  gap: 30px; 
+  display: flex;
+}
+
+.painting-work-card {
+  width: calc(50% - 15px);
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: flex-start; 
+  display: flex;
+}
+
+.painting-work-card img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.painting-work-card-content {
+  align-self: stretch;
+  height: 275px; 
+  padding: 50px; 
+  background: var(--clr-light); 
+  flex-direction: column; 
+  justify-content: flex-start; 
+  align-items: flex-start; 
+  gap: 30px; 
+  display: flex;
+}
+
+.painting-work-card-content h4 {
+  color: var(--clr-dark); 
+  line-height: var(--line-height-one);
+  font-weight: 600;
+}
+
+.painting-work-card-content p {
+  align-self: stretch; 
+  color: var(--clr-dark); 
+  font-size: var(--paragraph-two);
+  line-height: var(--line-height-one);
+}
+
+/* Takefornia Business Section */
+.takefornia-business-section {
+  align-self: stretch; 
+  padding-top: 100px; 
+  padding-bottom: 100px; 
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center; 
+  gap: 50px; 
+  display: flex;
+}
+
+.takefornia-business-div {
+  align-self: stretch;
+  justify-content: center; 
+  align-items: center; 
+  display: flex;
+  height: 600px;
+}
+
+.takefornia-business-detail {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(0, -50%);
+  width: 600px; 
+  padding: 50px; 
+  background: var(--clr-blue-200); 
+  box-shadow: var(--box-shadow); 
+  z-index: 1;
+}
+
+.takefornia-business-titles {
+  align-self: stretch;
+}
+
+.takefornia-business-titles h4 {
+  color: var(--clr-light); 
+}
+
+.takefornia-business-titles h3 {
+  color: var(--clr-light); 
+  font-family: var(--font-corben); 
+  font-weight: 700; 
+}
+
+.takefornia-business-detail p {
+  align-self: stretch; 
+  color: var(--clr-light); 
+  font-size: var(--paragraph-two);
+  line-height: var(--line-height-one);
+}
+
+.takefornia-business-detail .diy-text {
+  color: var(--clr-blue-200);
+}
+
+/* Takei - Works Page */
+
+/* Works Top Section */
+.works-top-section {
+  background: url(../images/work/pixta_93191143_M.jpg) no-repeat center;
+  background-size: cover;
+}
+
+/* Works List Section */
+  .works-list-section {
+  align-self: stretch;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background: var(--clr-light);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  display: flex;
+}
+
+.works-list-div {
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 100px;
+}
+
+.work-result-card {
+  width: calc(33.33% - 35px);
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  display: flex;
+}
+
+.work-result-card img {
+  align-self: stretch;
+  height: 300px;
+  object-fit: cover;
+}
+
+.work-result-card-content {
+  align-self: stretch;
+  padding: 30px;
+  background: var(--clr-blue-100);
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  display: flex;
+}
+.work-result-card-content p {
+  color: var(--clr-light);
+  line-height: var(--line-height-one);
+  font-weight: 500;
+  text-align: left;
+  font-size: var(--paragraph-two);
+}
+
+/* Work Detail Page */
+.work-detail-section {
+  padding: 100px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+.section-title-with-border {
+  width: 100%;
+  border-bottom: 2px solid var(--clr-blue-200);
+  padding-bottom: 30px;
+}
+.inside-section-title {
+  font-size: var(--heading-32);
+  color: var(--clr-dark);
+  font-weight: 500;
+  line-height: var(--line-height-one);
+}
+.work-detail-img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+}
+th {
+  font-size: var(--heading-20);
+  white-space: nowrap;
+}
+td {
+  font-size: var(--paragraph-two);
+}
+.table-striped>:not(caption)>*>* {
+  padding: 30px 20px 30px 50px;
+}
+tbody, td, tfoot, th, thead, tr {
+  border: none;
+}
+.counstruction-list li {
+  list-style: outside;
+}
+
+/* Company page */
+.company-top-section {
+  background: url(../images/company/S__6160396.jpg) no-repeat center;
+  background-size: cover;
+}
+.section-container {
+  width: 100%;
+  padding: 100px 0;
+}
+.company-detail-paragraph {
+  font-size: var(--heading-40);
+  font-weight: 500;
+  color: var(--clr-dark);
+  line-height: var(--line-height-one);
+  text-align: center;
+}
+.section--grey {
+  background: var(--clr-grey-150);
+}
+.map {
+  width: 100%;
+  height: 600px;
+}
+.top-message-section .container {
+  overflow: hidden;
+}
+.top-message-img img, .map img, .company-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.top-message-img {
+  overflow: hidden;
+}
+.top-message-img img {
+  scale: 2.5;
+  transform: translate(-12%, -5%);
+}
+.social-contri-img {
+  position: relative;
+  height: 550px;
+}
+.social-contri-img img {
+  width: 910px;
+  height: 100%;
+  object-fit: cover;
+  object-position: bottom;
+  position: absolute;
+  top: 0;
+  left: 50px;
+}
+.top-message-detail {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.top-message-detail p {
+  font-size: var(--heading-20);
+}
+.top-message-detail p:last-of-type {
+  align-self: stretch;
+  display: flex;
+  justify-content: flex-end;
+  text-align: right;
+}
+.company-overview-section, .history-section {
+  padding-bottom: 0;
+}
+.history-th {
+  padding: 30px 0 !important;
+  border-bottom: 2px solid var(--clr-blue-100);
+}
+.history-td {
+  padding: 30px 0 30px 100px !important;
+  border-bottom: 2px solid var(--clr-grey-200);
+}
+.social-contri-paragraph {
+  font-size: var(--heading-20);
+  line-height: var(--line-height-one);
+}
+.social-contri-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+.company-card {
+  display: flex;
+  height: 300px;
+}
+.company-card .row {
+  height: 100%;
+}
+.company-card__contents {
+  padding: 0 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background: var(--clr-blue-100);
+  white-space: nowrap;
+}
+.company-card__title, .company-card__detail {
+  color: var(--clr-light);
+}
+.company-card__title {
+  font-size: var(--heading-20);
+  text-transform: uppercase;
+  font-style: italic;
+  font-weight: 400;
+}
+.company-card__detail {
+  font-size: var(--heading-32);
+  font-weight: 500;
+}
+.company-card__image {
+  padding: 0;
+}
+.business-card, .recruit-card {
+  padding: 0;
+}
+/* End of Company page */
+
+/* Recruit page */
+.recruit-top-section {
+  background: url(../images/recruit/pixta_75886196_M.jpg) no-repeat center;
+  background-size: cover;
+}
+.job-detail__contents, .employment-conditions__contents {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+.job-detail__paragraph {
+  font-size: var(--paragraph-one);
+  line-height: var(--line-height-one);
+}
+/* End of recruit page */
+
+/* News page */
+.news-top-section {
+  background: url(../images/news/pixta_58090542_M.jpg) no-repeat center center;
+  background-size: cover;
+}
+.news-list__list {
+  padding: 50px 50px 50px 100px;
+}
+.news-list__list .news-item:last-of-type {
+  padding-bottom: 0;
+}
+/* End of news page */
+
+/* News Detail page */
+.news-single, .news-single__title_content {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+}
+.news-single {
+  gap: 30px;
+}
+.news-single__title_content {
+  gap: 10px;
+  padding-bottom: 30px;
+  border-bottom: 2px var(--clr-blue-100) solid;
+}
+.news-single__date, .news-single__title {
+  font-weight: 500;
+  line-height: var(--line-height-one);
+}
+.news-single__date {
+  font-size: var(--paragraph-one);
+}
+.news-single__title {
+  font-size: var(--heading-32);
+}
+/* End of news detail page */
+
+/* Contact us page */
+.contact-top-section {
+  background: url(../images/contact/pixta_97829180_M.jpg) no-repeat center;
+  background-size: cover;
+}
+.contact-us__container {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+.contact-us__text {
+  font-size: var(--heading-32);
+  font-weight: 500;
+  color: var(--clr-dark);
+  line-height: var(--line-height-one);
+  text-align: center;
+}
+.agreement-section {
+  align-self: stretch;
+  overflow-y: scroll;
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.form__label_contents {
+  padding: 50px 30px; 
+  background: var(--clr-blue-200);
+  display: flex;
+  gap: 20px;
+}
+.form__label_text {
+  color: var(--clr-light);
+  font-size: var(--heading-20);
+  margin: 0;
+}
+.required__label {
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px;
+  background-color: var(--clr-red);
+}
+.required__label_text {
+  color: var(--clr-light);
+  font-size: var(--paragraph-two);
+}
+.form__fields {
+  padding: 50px 50px 5px 50px; 
+  background: var(--clr-grey-150);
+}
+.form__textarea {
+  padding-bottom: 50px;
+}
+textarea.form-control {
+  min-height: 150px;
+}
+.form__input {
+  height: 100%;
+  border: none;
+  border-radius: 0;
+  font-size: var(--paragraph-two);
+}
+.agreement__text {
+  font-size: var(--paragraph-two);
+  line-height: var(--line-height-one);
+  color: var(--clr-dark);
+}
+.personal-info__content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.personal-info__title {
+  font-size: var(--heading-20);
+  font-weight: 500;
+  color: var(--clr-blue-100);
+  line-height: var(--line-height-one);
+}
+.personal-info__text {
+  color: var(--clr-dark);
+  font-size: var(--paragraph-two);
+}
+.agreement__list {
+  padding-left: 1rem;
+}
+.agreement__list li {
+  color: var(--clr-dark);
+  list-style: decimal;
+}
+.form-check-input {
+  width: 24px;
+  height: 24px;
+  border: 1px solid var(--clr-dark);
+  border-radius: 0;
+}
+.form-check-label {
+  color: var(--clr-dark);
+  font-size: var(--paragraph-two);
+}
+.form__button {
+  padding: 30px 50px;
+  background: var(--clr-dark); 
+  justify-content: center; 
+  align-items: center; 
+  gap: 30px; 
+  display: flex;
+}
+.form-btn__english {
+  color: var(--clr-light-50);
+  font-size: var(--paragraph-two);
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.form-btn__jap {
+  color: var(--clr-light);
+  font-size: var(--heading-20);
+  white-space: nowrap;
+}
+.contact__complete {
+  padding: 50px;
+  background: var(--clr-grey-150);
+  display: flex;
+  justify-content: center;
+}
+.contact__complete_text {
+  max-width: 1000px;
+  font-size: var(--paragraph-one);
+  line-height: var(--line-height-one);
+  color: var(--clr-dark);
+  text-align: center;
+}
+/* End of contact us page */
